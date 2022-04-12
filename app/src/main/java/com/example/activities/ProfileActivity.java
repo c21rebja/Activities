@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
 
     private Button signout_button;
+    private TextView name_holder;
 
     @Override
     protected void onPostResume() {
@@ -58,5 +60,8 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });
+
+        name_holder = findViewById(R.id.name_textview);
+        name_holder.setText("Welcome " + username);
     }
 }
