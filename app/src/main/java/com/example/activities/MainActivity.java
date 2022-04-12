@@ -12,6 +12,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private Button signin_button;
+    private Button about_button;
     private EditText username;
     private String username_text;
 
@@ -55,7 +56,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("===", "Button has been pressed!!");
                 Log.d("===", "Username is: " + username.getText().toString());
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                intent.putExtra("name", username.getText().toString());
                 startActivity(intent);
+            }
+        });
+
+        about_button.findViewById(R.id.about_button);
+        about_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("===", "About button has been pressed");
             }
         });
     }
