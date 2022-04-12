@@ -57,7 +57,6 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("===", "Signout button has been clicked");
                 finish();
-
             }
         });
 
