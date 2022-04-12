@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
     private Button signin_button;
     private Button about_button;
     private EditText username;
-    private String username_text;
 
     @Override
     protected void onPostResume() {
@@ -47,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d("===", "MainActivity created");
 
         username = findViewById(R.id.signin_input);
-        username_text = username.getText().toString();
 
         signin_button = findViewById(R.id.signin_button);
         signin_button.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("===", "Button has been pressed!!");
                 Log.d("===", "Username is: " + username.getText().toString());
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                intent.putExtra("name", username.getText().toString());
+                intent.putExtra("username", username.getText().toString());
                 startActivity(intent);
             }
         });
