@@ -11,6 +11,7 @@
         android:theme="@style/Theme.Activities">
         <activity
             android:name=".ProfileActivity"
+            android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
