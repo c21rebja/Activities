@@ -4,4 +4,6 @@
     <string name="login_hint">Your name here…</string>
     <string name="login_button">Sign in</string>
     <string name="logout_button">Sign Out</string>
+    <string name="about_button">About</string>
+    <string name="profile_text">This is your profile!</string>
 </resources>
