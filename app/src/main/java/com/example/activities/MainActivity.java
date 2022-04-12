@@ -7,10 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button signin_button;
+    private EditText username;
+    private String username_text;
 
     @Override
     protected void onPostResume() {
@@ -42,11 +45,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("===", "MainActivity created");
 
+        username = findViewById(R.id.signin_input);
+        username_text = username.getText().toString();
+
         signin_button = findViewById(R.id.signin_button);
         signin_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("===", "Button has been pressed!!");
+                Log.d("===", "Username is: " + username.getText().toString());
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                 startActivity(intent);
             }
